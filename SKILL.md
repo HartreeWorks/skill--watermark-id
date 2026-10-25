@@ -17,6 +17,6 @@ A watermarked copy names who it was for and why, so a leaked or resold copy is u
    <skill-dir>/scripts/watermark.py <file> --recipient "<org>" --purpose "<procedure>" [--lang en]
    ```
 
-   It accepts JPEG, PNG, HEIC, WebP and PDF; writes `<name>-watermarked-<recipient>.<ext>` beside the original and prints the path. PDFs come out flattened (rasterised), and all outputs drop EXIF/GPS metadata. `--text` replaces the template; `--opacity` (0–255, default 95) adjusts strength.
+   It accepts JPEG, PNG, HEIC, WebP and PDF; writes `<name>-watermarked-<recipient>.<ext>` beside the original and prints the path. PDFs come out flattened (rasterised), and all outputs drop EXIF/GPS metadata. `--text` replaces the template; `--opacity` (0–255, default 70) adjusts strength.
 4. **Look at the result**: render a downscaled preview (`magick <out> -resize 1200x1200 <scratch>/preview.jpg`, or `magick -density 60 "<out.pdf>[0]" …` for a PDF) and read it. Done when the watermark covers the whole document and every field, the photo and the MRZ remain legible.
 5. **Send the watermarked file** in place of the original wherever it was going, and mention to the user that it is watermarked and for whom.
