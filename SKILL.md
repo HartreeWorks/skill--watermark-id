@@ -14,7 +14,7 @@ A watermarked copy names who it was for and why, so a leaked or resold copy is u
 3. **Run the script** on each file. Use `--lang fr` (default) for French recipients and `--lang en` otherwise:
 
    ```sh
-   ~/.agents/skills/watermark-id/scripts/watermark.py <file> --recipient "<org>" --purpose "<procedure>" [--lang en]
+   <skill-dir>/scripts/watermark.py <file> --recipient "<org>" --purpose "<procedure>" [--lang en]
    ```
 
    It accepts JPEG, PNG, HEIC, WebP and PDF; writes `<name>-watermarked-<recipient>.<ext>` beside the original and prints the path. PDFs come out flattened (rasterised), and all outputs drop EXIF/GPS metadata. `--text` replaces the template; `--opacity` (0–255, default 95) adjusts strength.
